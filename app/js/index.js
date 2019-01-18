@@ -43,7 +43,7 @@ function autoSwiper(){
 		clearInterval(lbtimer);
 	}
 	lbtimer=setInterval(function(){
-		var cur=$(".slide-item-active");
+		var cur = $(".slide-item-active");
 		if($(cur).index()==$("#slide-tab li").size()-1){
 			$("#slide-list>.slide-item").eq(0).addClass("slide-item-active").siblings().removeClass("slide-item-active");
 			$("#slide-tab li").eq(0).addClass("slide-tab-item-active").siblings().removeClass("slide-tab-item-active");
