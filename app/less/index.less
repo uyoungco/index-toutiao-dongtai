@@ -39,7 +39,7 @@ img.animation  {
     transform: scale(1.1);
   }
 }
-
+@ahover: #406599;
 
 .bui-box:after, .bui-box:before {
   content: "";
@@ -238,12 +238,18 @@ img.animation  {
 
   .feed-infinite-wrapper {
     position: relative;
+    .ty-top-ent {
+      border-bottom: 1px solid #e8e8e8;
+    }
     .ty-card {
       padding-bottom: 20px;
       margin-top: -5px;
       overflow: visible;
       background: none;
       z-index: auto;
+      &:hover {
+        background-color: #FAFBFD;
+      }
       a {
         &:hover {
           color: #406599;
@@ -289,6 +295,201 @@ img.animation  {
           white-space: nowrap;
         }
       }
+    }
+  }
+}
+
+.hot_recommend_cnt {
+  li {
+    transition: background-color .2s linear;
+   
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+
+  /**
+  /* 单图样式
+  **/
+
+  .single-mode {
+    height: 90px;
+    position: relative;
+    padding: 10px 0;
+    border-bottom: 1px solid #e8e8e8;
+  }
+  .single-mode-lbox {
+    width: 156px;
+    height: 87px;
+    margin-right: 16px;
+    a {
+      width: 156px;
+      height: 87px;
+      display: block;
+    }
+  }
+
+  .title-box {
+    display: block;
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 4px;
+    font-weight: 700;
+    max-height: 52px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    a {
+      color: #222;
+      &:hover {
+        color: @ahover;
+      }
+    }
+  }
+  .img-wrap {
+    &:hover .xxl_mask {
+      display: block;
+    }
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    background: #e8e8e8;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    &:hover img {
+      transform: matrix(1.04,0,0,1.04,0,0);
+      backface-visibility: hidden;
+    }
+    & > img {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      vertical-align: middle;
+      transition: all .5s ease-out .1s;
+    }
+    // .xxl_mask {
+    //   width: 100%;
+    //   height: 100%;
+    //   position: absolute;
+    //   display: none;
+    //   top: 0;
+    // }
+    div.poa {
+      width: 100%;
+      height: 40px;
+      left: 0;
+      bottom: 0;
+      background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+      span {
+        right: 10px;
+        bottom: 10px;
+        font-size: 12px;
+        color: #fff;
+      }
+    }
+  }
+
+  .single-mode-rbox {
+    height: 100%;
+    overflow: hidden;
+    &:before {
+      content: '';
+      width: 0;
+      font-size: 0;
+      height: 100%;
+      visibility: hidden;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .single-mode-rbox-inner {
+      display: inline-block;
+      width: 99%;
+      vertical-align: middle;
+    }
+  }
+
+  .footer-bar {
+    font-size: 12px;
+    color: #999;
+    margin-top: 10px;
+    .footer-bar-left {
+      display: inline-block;
+      font-size: 0;
+      vertical-align: middle;
+      line-height: 20px;
+      .footer-bar-action {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 1;
+        vertical-align: middle;
+        &.tag {
+          font-size: 12px;
+          color: #87a5b5;
+          margin-right: 10px;
+          padding: 1px 2px;
+          border: 1px solid #87a5b5;
+          cursor: default;
+        }
+      }
+      .source {
+        color: #777;
+        font-size: 14px;
+        cursor: default;
+      }
+    }
+  }
+
+  /**
+  /* 四图样式
+  **/
+
+  .more-mode {
+    position: relative;
+    padding: 10px 0 10px 10px;
+    border-bottom: 1px solid #e8e8e8;
+    // .title-box {
+    //   -webkit-line-clamp: 1;
+    // }
+    .img-list {
+      position: relative;
+      margin: 10px 0;
+      margin-left: -9px;
+      overflow: hidden;
+    }
+    .img-item {
+      float: left;
+      width: 156px;
+      height: 87px;
+      margin-left: 5px;
+    }
+    .flag360 {
+      width: 24px;
+      height: 18px;
+      line-height: 18px;
+      font-size: 12px;
+      color: #eee;
+      position: absolute;
+      top: 20px;
+      right: 0;
+    }
+  }
+  /**
+  /*  广告大图
+  **/
+  .ads360-datu{
+    .img-item {
+      // float: left;
+      display: block;
+      width: 100%;
+      height: 170px;
+      margin-left: 9px;
     }
   }
 }
